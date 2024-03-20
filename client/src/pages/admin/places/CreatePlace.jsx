@@ -280,7 +280,6 @@ function CreatePlace() {
                 </div>
 
             </div>
-            <UserFooter />
         </div>
     )
 }

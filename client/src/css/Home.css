@@ -1,0 +1,9 @@
+.main-container-padding {
+    display: flex;
+    justify-content: center;
+    padding: 12px 0px;
+}
+
+.location-card {
+    padding: 0px 20px;
+}

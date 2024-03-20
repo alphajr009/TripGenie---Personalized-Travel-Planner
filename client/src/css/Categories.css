@@ -1,0 +1,29 @@
+.blogscreen-content {
+    display: flex;
+    justify-content: center;
+    padding: 12px 80px;
+    padding-bottom: 10%;
+}
+
+.palce-card {
+    padding: 0px 20px !important;
+}
+
+.spinner-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 36vh;
+}
+
+.place-card-p p {
+    font-family: "SF Pro Display-Medium";
+    font-size: 16px;
+}
+
+.palce-card-image {
+    height: 260px;
+    width: 100%;
+    /* display: flex; */
+    object-fit: cover;
+}

@@ -1,0 +1,149 @@
+.admin-terminal-users {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.main-search-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-input-main {
+    width: 100%;
+}
+
+.option-selector {
+    width: 100%;
+    margin-top: 5px;
+}
+
+.search-button {
+    width: 100%;
+    margin-top: 5px;
+}
+
+.users-cus-name,
+.users-cus-id,
+.users-isadmin,
+.r-users-search {
+    margin-right: 10px;
+    height: 20px;
+    width: 20px;
+}
+
+
+.users-cus-name,
+.admin-users-cus-id.users-cus-id,
+.admin-terminal-IsAdmin.users-isadmin {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+.admin-terminal-users-cus-id {
+    display: flex;
+    align-items: center;
+    height: 38px;
+    width: 250px;
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 0 15px;
+    margin: 0 10px 10px 10px;
+}
+
+.admin-terminal-users-cus-id input {
+    border: none;
+    outline: none;
+    font-family: "Sansation-Bold", sans-serif;
+    font-size: 16px;
+    color: black;
+}
+
+.admin-terminal-users-cname-isAdmin {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 12px 20px;
+    border-radius: 4px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+
+:where(.css-dev-only-do-not-override-12upa3x).ant-row {
+    width: 100%;
+}
+
+.admin-users-table {
+    margin-top: 50px;
+    width: 90%;
+    border-collapse: collapse;
+    font-size: 15px;
+    font-family: "Sansation-Bold", sans-serif;
+
+}
+
+.admin-users-table td {
+    font-size: 15px;
+    font-family: "Sansation-Bold", sans-serif;
+}
+
+.admin-users-table td {
+    font-size: 15px;
+    font-family: "Sansation-Bold", sans-serif;
+
+
+}
+
+.ant-table-wrapper .ant-table-thead>tr>th,
+:where(.css-dev-only-do-not-override-1vtf12y).ant-table-wrapper .ant-table-thead>tr>td {
+    position: relative;
+    color: rgba(0, 0, 0, 0.88);
+    font-weight: 600;
+    text-align: start;
+    background: #30379B;
+    border-bottom: 1px solid #f0f0f0;
+    color: #fafafa;
+    font-size: 15px;
+    font-family: "Sansation-Bold", sans-serif;
+
+}
+
+:root {
+    --red-2: rgba(299, 4, 4, 0.108);
+    --harlequin-2: rgba(68, 213, 0, 0.109);
+}
+
+.admin-terminal-isAdmin-users-no {
+    font-family: "Sansation-Bold", sans-serif;
+    color: red;
+    height: 30px;
+    width: 80px;
+    background-color: var(--red-2);
+    border-color: red;
+    border-radius: 4px;
+}
+
+
+.admin-terminal-isAdmin-users-yes {
+    font-family: "Sansation-Bold", sans-serif;
+    color: green;
+    height: 30px;
+    width: 80px;
+    background-color: var(--red-2);
+    border-color: lightgreen;
+    border-radius: 4px;
+}
+
+.no-of-users {
+    font-size: 16px;
+    font-family: "Sansation-Bold", sans-serif;
+    color: rgb(170, 42, 42);
+}

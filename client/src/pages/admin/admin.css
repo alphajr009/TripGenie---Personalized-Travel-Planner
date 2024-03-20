@@ -1,0 +1,10 @@
+.adminscreen {
+    display: flex;
+    flex-direction: column;
+    min-height: 110vh;
+}
+
+
+.admincontainer {
+    flex-grow: 1;
+}

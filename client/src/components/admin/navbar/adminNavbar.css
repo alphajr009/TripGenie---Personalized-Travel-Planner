@@ -1,0 +1,63 @@
+@font-face {
+    font-family: "SF Pro Display-Bold";
+    font-style: normal;
+    font-weight: 500;
+    src: url("../../../fonts/SFPro-Bold.ttf") format("truetype");
+}
+
+.admin_navbar {
+    display: flex;
+    width: 100%;
+    background-color: #30379B;
+    background-size: cover;
+    color: #fff;
+    padding: 20px;
+}
+.bg-cl{
+    background-color:#30379B ;
+    color: #fff;
+}
+.user-avatar{
+    display: flex;
+    justify-content: end;
+}
+
+.admin_navContainer {
+        width: 100%;
+    color: aliceblue;
+}
+
+
+.admin_navbar-logo-and-text {
+    display: flex;
+    align-items: center;
+}
+
+.admin_navbar-logo {
+    margin-left: 40px;
+    height: 41px;
+    width: 144px;
+}
+
+.admin_navbar-text {
+  
+    text-align: center;
+}
+
+.admin_navbar-text h1 {
+    font-family: "SF Pro Display-Bold";
+    font-size: 30px;
+    text-align: center;
+}
+
+.user_icon {
+    display: flex;
+}
+
+.user {
+    color: white;
+    height: 40px;
+    width: 46px;
+    margin-top: 2px;
+    margin-right: 40px;
+}

@@ -1,0 +1,290 @@
+.containerz {
+    width: 100%;
+}
+
+.weather3 {
+
+    width: 380px;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 50px auto;
+    text-align: center;
+    color: white;
+    background: linear-gradient(130deg, rgb(86, 86, 235), rgb(5, 5, 199));
+}
+
+
+
+.icon1,
+.icon2,
+.icon3 {
+    position: relative;
+    width: 285px;
+    height: 427px;
+    object-fit: cover;
+}
+
+.icon2,
+.icon3 {
+    width: 320px;
+}
+
+.icon3 {
+    width: 569px;
+    height: 381px;
+}
+
+.group {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 23px;
+}
+
+.icon4,
+.icon5,
+.icon6,
+.icon7,
+.icon8 {
+    position: absolute;
+    top: 450px;
+    left: 0;
+    width: 348px;
+    height: 427px;
+    object-fit: cover;
+}
+
+.icon5,
+.icon6,
+.icon7,
+.icon8 {
+    left: 371px;
+    width: 285px;
+}
+
+.icon6,
+.icon7,
+.icon8 {
+    top: 400px;
+    left: 675px;
+    width: 320px;
+    height: 477px;
+}
+
+.icon7,
+.icon8 {
+    left: 1014px;
+    width: 206px;
+    height: 477px;
+}
+
+.icon8 {
+    top: 695px;
+    height: 182px;
+}
+
+.frameDiv {
+    position: relative;
+    width: 1220px;
+    height: 877px;
+}
+
+.fuction-icons {
+    cursor: pointer;
+    margin-right: 30px;
+}
+
+
+.weather {
+
+    width: 380px;
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+    margin: 50px auto;
+
+    text-align: center;
+
+    color: white;
+
+    background: linear-gradient(130deg, rgb(86, 86, 235), rgb(5, 5, 199));
+
+}
+
+.search {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+.search input {
+    border: none;
+    outline: 0;
+    padding: 12px 25px;
+    font-size: 18px;
+    background-color: rgb(222, 237, 243);
+    color: black;
+    border-radius: 30px;
+    flex: 1;
+    margin-right: 12px;
+}
+
+.search button {
+    border: none;
+    outline: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.search button img {
+    width: 20px;
+}
+
+.winfo .icon {
+    margin-top: 20px;
+    width: 170px;
+}
+
+.winfo h1 {
+    font-size: 70px;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.winfo h2 {
+    font-size: 40px;
+    font-weight: 400;
+    margin-top: -40px;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+    margin-top: 50px;
+}
+
+.details .col {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.details .col img {
+    width: 45px;
+    margin-right: 10px;
+}
+
+.humidity,
+.wind {
+    font-size: 27px;
+}
+
+.humidity p,
+.wind p {
+    margin: 0px;
+}
+
+.error {
+    color: rgb(235, 169, 169);
+    text-align: left;
+    margin-left: 10px;
+}
+
+.like-button-container .ant-btn-default:not(:disabled):hover {
+    color: #e4264e;
+    border-color: #fad0d7;
+}
+
+.like-button-container .ant-btn {
+    color: #a9b8c2;
+    border-color: rgb(233, 187, 195);
+}
+
+.liked-heart {
+    color: #e4264e;
+}
+
+.saved-fire {
+    color: #F8BA09;
+    font-size: 34px;
+    cursor: pointer;
+}
+
+.size-fire {
+    font-size: 34px;
+    cursor: pointer;
+}
+
+.like-button-container {
+    margin-top: 22%;
+
+}
+
+.download-button-container {
+    margin-top: 60%;
+}
+
+.place-reviews {
+    text-align: center;
+    padding: 0% 8%;
+
+}
+
+.review-card {
+    text-align: left;
+    background-color: #d1e7f5;
+    padding: 2% 3%;
+
+}
+
+.ratepoint {
+    right: 0;
+    margin-left: 100px;
+}
+
+.review-card-header {
+    display: flex;
+    flex-direction: row;
+}
+
+.review-cc-card {
+    padding: 1% 3%;
+    background: #f9fafb;
+}
+
+.right-text {
+    text-align: left !important;
+    margin-left: 1%;
+    margin-top: 60px;
+}
+
+
+.createblog-dis-custom-inputx {
+    font-family: "Sansation-Regular", sans-serif;
+    background-color: #ffffff !important;
+    font-size: 15px;
+    width: 630px;
+
+}
+
+.review-card-write {
+    background-color: #ffffff;
+    padding: 2% 3%;
+    width: 60%;
+    border-radius: 15px;
+}

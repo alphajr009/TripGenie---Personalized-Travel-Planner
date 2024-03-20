@@ -1,0 +1,24 @@
+.menuBar {
+	display: flex;
+	width: auto;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 12px 12px;
+	background: #fff;
+	font-family: "SF Pro Display-Medium" !important;
+	align-items: center;
+}
+
+.menuCon {
+	display: flex;
+	font-family: "SF Pro Display-Medium" !important;
+}
+
+:where(.css-dev-only-do-not-override-12upa3x).ant-menu {
+	font-family: "SF Pro Display-Medium" !important;
+}
+
+:where(.css-dev-only-do-not-override-12upa3x).ant-menu-horizontal {
+	border-bottom: none !important;
+}
+

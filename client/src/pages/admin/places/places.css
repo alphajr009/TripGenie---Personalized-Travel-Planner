@@ -1,0 +1,173 @@
+.seller-central-places-container {
+    display: flex;
+    flex-direction: column;
+    min-width: none;
+
+}
+
+.seller-central-places-tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 13px 10px 3px 10px;
+    border-radius: 20px;
+    border: 1px solid #4444AA;
+    background-color: #4444AA;
+    position: absolute;
+    left: 50%;
+    margin-top: 100px;
+    transform: translateX(-50%);
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+}
+
+.seller-central-create-blog-tab-container {
+    font-family: "Sansation-Bold", sans-serif;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 38px;
+    width: 200px;
+    background-color: white;
+    color: darkgray;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 0 15px;
+    margin: 0 10px 10px 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+.seller-central-places-tab-container {
+    font-family: "Sansation-Bold", sans-serif;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 38px;
+    width: 200px;
+    background-color: white;
+    color: darkgray;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 0 15px;
+    margin: 0 10px 10px 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.seller-central-create-blog-tab-container.active {
+    color: black;
+}
+
+.seller-central-places-tab-container.active {
+    color: black;
+}
+
+.seller-central-create-blog-tab-container:not(.active) {
+    background-color: white;
+    color: darkgray;
+}
+
+.seller-central-places-tab-container:not(.active) {
+    background-color: white;
+    color: darkgray;
+}
+
+.seller-central-table-places-sellers {
+    margin-top: 250px;
+    font-family: "Sansation-Bold", sans-serif;
+    padding: 0px 100px;
+}
+
+.seller-central-table-places-sellers th {
+    font-size: 15px;
+    font-family: "Sansation-Bold", sans-serif;
+}
+
+.seller-central-table-places-sellers td {
+    font-size: 15px;
+    font-family: "Sansation-Bold", sans-serif;
+}
+
+
+:root {
+    --red-2: rgba(299, 4, 4, 0.108);
+    --harlequin-2: rgba(68, 213, 0, 0.109);
+
+}
+
+.btn-edit-places-by-seller {
+    font-family: "Sansation-Bold", sans-serif;
+    color: green;
+    height: 30px;
+    width: 80px;
+    background-color: var(--harlequin-2);
+    border-color: lightgreen;
+    border-radius: 4px;
+}
+
+.btn-delete-places-by-seller {
+    font-family: "Sansation-Bold", sans-serif;
+    color: red;
+    height: 30px;
+    width: 80px;
+    background-color: var(--red-2);
+    border-color: red;
+    border-radius: 4px;
+}
+
+.swal2-icon.swal2-warning {
+    border-color: red;
+    color: red;
+}
+
+.swal2-title {
+    font-family: "Sansation-Bold", sans-serif;
+    font-size: 14px;
+    color: black;
+}
+
+.swal2-html-container {
+    z-index: 1;
+    justify-content: center;
+    margin: 1em 1.6em 0.3em;
+    padding: 0;
+    overflow: auto;
+    color: inherit;
+    font-size: 1.125em;
+    font-weight: normal;
+    line-height: normal;
+    text-align: center;
+    word-wrap: break-word;
+    word-break: break-word;
+    color: black;
+    font-family: 'Sansation-Bold';
+}
+
+.swal2-styled.swal2-cancel {
+    border: 0;
+    border-radius: 0.25em;
+    background: initial;
+    background-color: #6e7881;
+    color: #fff;
+    font-size: 1em;
+    font-family: 'Sansation-Bold';
+}
+
+
+.editblogmodal :where(.css-dev-only-do-not-override-1vtf12y).ant-modal .ant-modal-content {
+    position: relative;
+    background-color: #ffffff;
+    background-clip: padding-box;
+    border: 0;
+    border-radius: 8px;
+    box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+    pointer-events: auto;
+    padding: 20px 24px;
+    width: fit-content;
+}

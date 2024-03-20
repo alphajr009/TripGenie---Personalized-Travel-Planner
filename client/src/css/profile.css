@@ -1,0 +1,52 @@
+*{
+    font-family: "SF Pro Display-Medium" !important;
+}
+
+.profile-cover{
+    background-image: url(../../public/images/p-cover.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    position: relative;
+}
+.acc-form-sec{
+    display: flex;
+    justify-content: center;
+    padding: 5% 10%;
+}
+.form-coloums{
+    display: flex;
+}
+:where(.css-dev-only-do-not-override-12upa3x).ant-picker{
+    padding: 0px 11px;
+    width: 100%;
+}
+
+:where(.css-dev-only-do-not-override-12upa3x).ant-select-multiple .ant-select-selection-overflow {
+    position: relative;
+    display: flex;
+    flex: auto;
+    flex-wrap: wrap;
+    max-width: 80%;
+    padding: 4px 11px;
+}
+.user-submit-btn{
+    background-color: #4D4F86;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px;
+}
+.user-edit-btn{
+    padding: 20px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px;
+    position: absolute;
+    top: 84%;
+    left: 84%;
+}

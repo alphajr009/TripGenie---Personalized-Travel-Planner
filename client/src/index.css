@@ -1,0 +1,237 @@
+@font-face {
+	font-family: "SF Pro Display-Regular";
+	font-style: normal;
+	font-weight: 400;
+	src: url("./fonts/SFPro-Display-Regular.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "SF Pro Display-Medium";
+	font-style: normal;
+	font-weight: 500;
+	src: url("./fonts/SFPro-Medium.otf") format("opentype");
+}
+
+@font-face {
+	font-family: "SF Pro Display-Bold";
+	font-style: normal;
+	font-weight: 500;
+	src: url("./fonts/SFPro-Bold.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "SF Pro Display-Italic";
+	font-style: normal;
+	src: url("./fonts/SF\ Pro\ Display\ Italic.ttf") format("truetype");
+}
+
+
+.ant-tooltip .ant-tooltip-inner {
+	background-color: #555555;
+	font-family: "SF Pro Display-Regular" !important;
+	font-size: 14px !important;
+
+}
+
+.pagnition {
+	text-align: right;
+	margin-top: 50px;
+}
+
+body {
+	font-family: "SF Pro Display-Regular";
+}
+
+h1 {
+	font-family: "SF Pro Display-Medium";
+	font-size: 40px !important;
+	margin-top: 0px;
+	margin-bottom: 20px;
+}
+
+h3 {
+	font-family: "SF Pro Display-Medium";
+	font-size: 30px !important;
+	margin-top: 0px;
+	margin-bottom: 20px;
+}
+
+h4 {
+	font-family: "SF Pro Display-Medium";
+	font-size: 18px !important;
+	margin-top: 0px;
+}
+
+h5 {
+	font-family: "SF Pro Display-Medium";
+	font-size: 17px !important;
+	margin-top: 0px;
+}
+
+
+h6 {
+	font-family: "SF Pro Display-Medium";
+	font-size: 24px !important;
+	margin-top: 0px;
+	margin-bottom: 8px;
+}
+
+.location-step-txt {
+	font-family: "SF Pro Display-Regular";
+	margin-top: 0px;
+	font-size: 15px;
+}
+
+p {
+	font-family: "SF Pro Display-Regular";
+	margin-bottom: 8px;
+}
+
+.fw-medium {
+	font-family: "SF Pro Display-Medium";
+}
+
+h2 {
+	font-family: "SF Pro Display-Regular";
+	font-size: 39px !important;
+	margin-bottom: 8px;
+}
+
+.review-dis {
+	font-family: "SF Pro Display-Italic" !important;
+	font-size: 15px;
+	margin-top: 20px;
+	height: 147.3px;
+}
+
+.ant-form label {
+	font-family: "SF Pro Display-Medium";
+	font-size: 18px !important;
+	margin-bottom: 8px;
+}
+
+.ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item {
+	font-family: "SF Pro Display-Regular";
+}
+
+
+:where(.css-dev-only-do-not-override-12upa3x)[class*=" ant-form"] {
+	font-family: "SF Pro Display-Regular";
+	font-size: 16px !important;
+
+}
+
+.p {
+	font-family: "SF Pro Display-Regular";
+	font-size: 16px !important;
+	margin-bottom: 8px;
+}
+
+.text-align-left {
+	text-align: left;
+	font-family: "SF Pro Display-Regular";
+}
+
+.text-align-center {
+	text-align: center !important;
+	font-family: "SF Pro Display-Regular";
+}
+
+.space {
+	background-color: #005fbd !important;
+}
+
+.trip-modal-label {
+	text-align: center;
+	margin-bottom: 20px;
+	font-size: 22px;
+}
+
+.trip-modal-upload {
+	text-align: center;
+}
+
+.innter-form-section {
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	justify-content: center;
+	height: 100vh;
+}
+
+.cloud-icon {
+	font-size: 25px;
+}
+
+.ant-input {
+	font-family: "SF Pro Display-Regular";
+}
+
+
+:where(.css-dev-only-do-not-override-12upa3x)[class^="ant-btn"],
+:where(.css-dev-only-do-not-override-12upa3x)[class*=" ant-btn"] {
+
+	font-family: "SF Pro Display-Medium";
+	font-size: 16px !important;
+}
+
+.notification-btn {
+	font-family: "SF Pro Display-Regular";
+	padding: 4px 8px;
+	background-color: #1677ff;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.ant-notification-notice-message {
+	font-family: "SF Pro Display-Regular";
+}
+
+.ant-notification-notice-description {
+	font-family: "SF Pro Display-Regular";
+}
+
+.ant-card .ant-card-body {
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 0px;
+}
+
+.nav-menu-items {
+	gap: 10px;
+}
+
+.trip-card-note {
+	color: #cecdcd;
+	font-size: 15px;
+	font-family: "SF Pro Display-Regular" !important;
+	min-height: 48px;
+}
+
+
+.trip-card-footer {
+	display: flex;
+	color: #ffffff;
+	justify-content: space-between;
+	background-color: #329fe2;
+	padding: 4px 6px;
+	border-radius: 6px;
+	margin-bottom: 5%;
+	margin-top: 3%;
+}
+
+.trip-card-footer-item-txt {
+	font-size: 15px;
+}
+
+.tripplan-body-content {
+	padding: 5% 8%;
+}
+
+
+.tripplan-body-content .slick-track {
+	margin-left: 0 !important;
+}

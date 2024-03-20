@@ -1,0 +1,103 @@
+.container {
+    padding: 5% 8%;
+}
+
+.carosal {
+    display: flex;
+}
+
+.h3placetrip {
+    padding-top: 5%;
+}
+
+.plan-trip-card {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 15px;
+
+}
+
+.pt-create-btn {
+    margin-top: 5%;
+    text-align: center;
+}
+
+
+.plan-trip-card .ant-btn-default:not(:disabled):hover {
+    color: #ffffff;
+    border-color: rgb(255, 255, 255);
+    background-color: #1677ff;
+}
+
+.plan-trip-card .ant-btn-default {
+    background-color: #ffffff;
+    border-color: #4096ff;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.02);
+    color: #000000;
+}
+
+.pt-create-btn .ant-btn-default:not(:disabled):hover {
+    color: #ffffff;
+    border-color: rgb(255, 255, 255);
+    background-color: #489afd;
+}
+
+.pt-create-btn .ant-btn-default {
+    background-color: #1677ff;
+    border-color: #1677ff;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.02);
+    color: #ffffff;
+
+}
+
+.pt-create-btn .ant-btn {
+    height: 40px;
+    padding: 6px 40px;
+    border-radius: 6px;
+}
+
+
+.place-cover {
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    position: relative;
+    filter: brightness(60%);
+}
+
+.place-cover-details {
+    position: absolute;
+    top: 170px;
+    color: #fff;
+    padding: 2% 5%;
+}
+
+.place-cover-save {
+    position: absolute;
+    top: 90px;
+    right: 0;
+    color: #fff;
+    padding: 2% 3%;
+}
+
+
+.place-page-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 4% 0%;
+}
+
+.place-page-content p {
+    margin-bottom: 20px;
+}
+
+
+.ant-card.selected {
+    border: 2px solid #1677ff;
+
+}

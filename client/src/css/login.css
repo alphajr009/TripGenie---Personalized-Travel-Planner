@@ -1,99 +1,102 @@
 body {
-	background-color: #f9fafb !important;
-	/* Replace with your desired color */
+  background-color: #f9fafb !important;
+  /* Replace with your desired color */
 }
 
 .m-8 {
-	margin: 8px 0px !important;
+  margin: 8px 0px !important;
 }
 
 .main-col {
-	height: 100vh;
+  height: 100vh;
 }
 
 .login-pic {
-	background-image: url(../../public/images/login-pic.png);
-	background-repeat: no-repeat;
-	object-fit: contain !important;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
+  background-image: url(../../public/images/login-pic.png);
+  background-repeat: no-repeat;
+  object-fit: contain !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 
-.ant-form-item .ant-form-item-label>label {
-	font-family: "sf-pro-regular !important";
-	font-size: 16px;
+.ant-form-item .ant-form-item-label > label {
+  font-family: "sf-pro-regular !important";
+  font-size: 16px;
 }
-
 
 .sign-up-google {
-	padding: 12px;
-	background: #f0f1f8;
-	border: none;
-	border-radius: 8px;
-	width: 100%;
-	display: flex;
-	color: #313957;
-	align-items: center;
-	justify-content: center;
+  padding: 12px;
+  background: #f0f1f8;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  display: flex;
+  color: #313957;
+  align-items: center;
+  justify-content: center;
 }
 
 .sign-up-google img {
-	padding: 0px 12px;
-	height: 16px;
+  padding: 0px 12px;
+  height: 16px;
 }
 
 input {
-	padding: 8px 8px !important;
+  padding: 8px 8px !important;
 }
 
-.ant-input-affix-wrapper>input.ant-input {
-	padding: 4px 0px !important;
+.ant-input-affix-wrapper > input.ant-input {
+  padding: 4px 0px !important;
 }
 
 .ant-form label {
-	margin: 8px 0px !important;
+  margin: 8px 0px !important;
 }
 
 .login-btn {
-	background-color: #4d4f86 !important;
-	height: 40px;
-	width: 100%;
-	color: #f0f1f8 !important;
-	margin-top: 10px;
+  background-color: #4d4f86 !important;
+  height: 40px;
+  width: 100%;
+  color: #f0f1f8 !important;
+  margin-top: 10px;
 }
 
 @media (max-width: 768px) {
-	.login-pic {
-		display: none !important;
-	}
+  .login-pic {
+    display: none !important;
+  }
 
-	:where(.css-dev-only-do-not-override-12upa3x).ant-col-12 {
-		display: flex;
-		justify-content: center !important;
-		max-width: 100% !important;
-		margin: 0px !important;
-		padding: 20px;
-		flex: auto;
-	}
+  :where(.css-dev-only-do-not-override-12upa3x).ant-col-12 {
+    display: flex;
+    justify-content: center !important;
+    max-width: 100% !important;
+    margin: 0px !important;
+    padding: 20px;
+    flex: auto;
+  }
 }
 
 .forget-pw {
-	display: flex;
-	justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
-
 .forget-pw a {
-	color: #4d4f86;
-	font-family: "SF Pro Display-Medium";
+  color: #4d4f86;
+  font-family: "SF Pro Display-Medium";
 }
 
 .sign-up-btn-col {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .login-acc-have {
-	margin-top: 20px;
+  margin-top: 20px;
+}
+
+.resend-otp-btn {
+  margin-top: 20px;
+  text-align: center;
 }

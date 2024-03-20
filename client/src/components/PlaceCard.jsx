@@ -1,14 +1,8 @@
-import React from 'react';
-import { Card } from 'antd';
-
-const { Meta } = Card;
+import React from "react";
+import { Card } from "antd";
 
 const PlaceCard = ({ PlaceCardName, src, onClick }) => (
-  <Card
-    hoverable
-    cover={<img alt="example" src={src} />}
-    onClick={onClick}
-  >
+  <Card hoverable cover={<img alt="example" src={src} />} onClick={onClick}>
     <p>{PlaceCardName}</p>
   </Card>
 );

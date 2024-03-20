@@ -172,7 +172,7 @@ const Login = () => {
                       Remember me
                     </a>
                   </Checkbox>{" "}
-                  <a href="#">Forgot password</a>{" "}
+                  <a href="/forget-password">Forgot password</a>{" "}
                 </div>
                 <div className="login-acc-have">
                   <p className="text-align-center">

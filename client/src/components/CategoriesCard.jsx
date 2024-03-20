@@ -1,11 +1,11 @@
-import { useState } from 'react';
-import { Tabs, Col } from 'antd';
-import Do from './Do';
-import Eat from './Eat';
-import Stay from './Stay';
+import { useState } from "react";
+import { Tabs } from "antd";
+import Do from "./Do";
+import Eat from "./Eat";
+import Stay from "./Stay";
 
 const App = () => {
-  const [activeTab, setActiveTab] = useState('1');
+  const [activeTab, setActiveTab] = useState("1");
 
   const handleTabChange = (key) => {
     setActiveTab(key);
@@ -13,11 +13,11 @@ const App = () => {
 
   const renderContent = (key) => {
     switch (key) {
-      case '1':
+      case "1":
         return <Do />;
-      case '2':
+      case "2":
         return <Eat />;
-      case '3':
+      case "3":
         return <Stay />;
       default:
         return null;
@@ -37,9 +37,7 @@ const App = () => {
         <Tabs.TabPane tab="Stay" key="3" />
       </Tabs>
 
-
       {renderContent(activeTab)}
-
     </>
   );
 };

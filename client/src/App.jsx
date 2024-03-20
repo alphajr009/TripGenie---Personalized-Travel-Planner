@@ -1,19 +1,20 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import SignUp from './pages/user/Signup';
-import Login from './pages/user/Login';
-import Home from './pages/user/home';
-import Admin from './pages/admin/admin';
-import Account from './pages/Account';
-import PlanTrip from './pages/PlanTrip';
-import Place from './pages/user/Place';
-import Trips from './pages/user/Trips';
-import Location from './pages/user/Location';
-import TripPage from './pages/user/TripPage';
+import React from "react";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import SignUp from "./pages/user/Signup";
+import Login from "./pages/user/Login";
+import Home from "./pages/user/home";
+import Admin from "./pages/admin/admin";
+import Account from "./pages/Account";
+import PlanTrip from "./pages/PlanTrip";
+import Place from "./pages/user/Place";
+import Trips from "./pages/user/Trips";
+import Location from "./pages/user/Location";
+import TripPage from "./pages/user/TripPage";
+import ForgetPassword from "./pages/user/ForgetPassword";
 
 // Custom component to validate admin access
 const AdminRouteGuard = () => {
-  const user = JSON.parse(localStorage.getItem('currentUser'));
+  const user = JSON.parse(localStorage.getItem("currentUser"));
 
   if (user && user.isAdmin) {
     return <Admin />;
@@ -25,7 +26,7 @@ const AdminRouteGuard = () => {
 
 // Custom component to validate user access
 const UserRouteGuard = ({ children }) => {
-  const user = JSON.parse(localStorage.getItem('currentUser'));
+  const user = JSON.parse(localStorage.getItem("currentUser"));
 
   if (user) {
     return children;
@@ -44,6 +45,7 @@ function App() {
           <Route path="/signup" element={<SignUp />} exact />
           <Route path="/login" element={<Login />} exact />
           <Route path="/home" element={<Home />} exact />
+          <Route path="/forget-password" element={<ForgetPassword />} />
 
           {/* Protected Routes */}
           <Route

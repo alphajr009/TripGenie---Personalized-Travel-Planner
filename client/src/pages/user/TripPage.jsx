@@ -168,6 +168,7 @@ function TripPage() {
             doc.text(`${place.name}`, 110, yPosition + 20);
             doc.setFont('helvetica', 'normal')
             doc.text('Address: ', 110, yPosition + 26);
+            // doc.setFont('helvetica', 'normal')
             const lines = doc.splitTextToSize(place.address, 75); // Break address into multiple lines
             for (let i = 0; i < lines.length; i++) {
                 doc.text(lines[i], 128, yPosition + 26 + (i * 6)); // Adjust the increment value (6) as needed for spacing between lines
@@ -185,7 +186,6 @@ function TripPage() {
     // Save the PDF with a filename
     doc.save(`${trips.tripname}.pdf`);
 }
-
 
 
 // Function to convert blob to Base64

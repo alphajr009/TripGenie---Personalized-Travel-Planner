@@ -3,7 +3,6 @@ import './createplace.css';
 import { Input, Form, Select, notification } from 'antd';
 import axios from 'axios';
 import ImageUploader from '../../../components/ImageUploader';
-import UserFooter from '../../../components/footer/UserFooter';
 
 function CreatePlace() {
 

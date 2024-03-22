@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const userSchema = mongoose.Schema(
+const sellerSchema = mongoose.Schema(
   {
     name: {
       type: String,
@@ -12,10 +12,6 @@ const userSchema = mongoose.Schema(
       required: true,
     },
     gender: {
-      type: String,
-      required: false,
-    },
-    hometown: {
       type: String,
       required: false,
     },
@@ -36,15 +32,11 @@ const userSchema = mongoose.Schema(
       type: String,
       required: true,
     },
-    favhotles: [],
-    favlocations: [],
-
-    isSetup: {
+    isSeller: {
       type: Boolean,
-      default: false,
+      default: true,
     },
-
-    isAdmin: {
+    isSetup: {
       type: Boolean,
       default: false,
     },
@@ -54,6 +46,6 @@ const userSchema = mongoose.Schema(
   }
 );
 
-const userModel = mongoose.model("users", userSchema);
+const sellerModel = mongoose.model("sellers", sellerSchema);
 
-module.exports = userModel;
+module.exports = sellerModel;

@@ -1,0 +1,44 @@
+.seller-navbar {
+  background-color: #2e96d6;
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.seller-title {
+  color: #fff;
+  font-size: 26px;
+}
+
+.tab-buttons {
+  display: flex;
+  gap: 50px;
+  margin-top: 2%;
+}
+
+.tab-buttons button {
+  background: none;
+  border: none;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.tab-buttons button:hover {
+  color: #f0f0f0;
+}
+
+.tab-btn-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tab-btn-wrapper-name p {
+  font-size: 16px;
+  color: #fff;
+}

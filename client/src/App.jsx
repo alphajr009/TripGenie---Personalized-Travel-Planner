@@ -11,6 +11,10 @@ import Trips from "./pages/user/Trips";
 import Location from "./pages/user/Location";
 import TripPage from "./pages/user/TripPage";
 import ForgetPassword from "./pages/user/ForgetPassword";
+import SellerRegister from "./pages/sellers/SellerRegister";
+import SellerLogin from "./pages/sellers/SellerLogin";
+import ForgotPassword from "./pages/sellers/ForgotPassword";
+import SellerDashboard from "./pages/sellers/SellerDashboard";
 
 // Custom component to validate admin access
 const AdminRouteGuard = () => {
@@ -24,6 +28,17 @@ const AdminRouteGuard = () => {
   }
 };
 
+// Custom component to validate seller access
+const SellerRouteGuard = () => {
+  const user = JSON.parse(localStorage.getItem("currentUser"));
+
+  if (user && user.isSeller) {
+    return <SellerDashboard />;
+  } else {
+    return <Navigate to="/seller-login" />;
+  }
+};
+
 // Custom component to validate user access
 const UserRouteGuard = ({ children }) => {
   const user = JSON.parse(localStorage.getItem("currentUser"));
@@ -31,7 +46,6 @@ const UserRouteGuard = ({ children }) => {
   if (user) {
     return children;
   } else {
-    // Redirect to login page if the user is not logged in
     return <Navigate to="/login" />;
   }
 };
@@ -46,6 +60,9 @@ function App() {
           <Route path="/login" element={<Login />} exact />
           <Route path="/home" element={<Home />} exact />
           <Route path="/forget-password" element={<ForgetPassword />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/seller-register" element={<SellerRegister />} exact />
+          <Route path="/seller-login" element={<SellerLogin />} exact />
 
           {/* Protected Routes */}
           <Route
@@ -94,6 +111,15 @@ function App() {
               <UserRouteGuard>
                 <Location />
               </UserRouteGuard>
+            }
+          />
+
+          <Route
+            path="/seller-dashboard"
+            element={
+              <SellerRouteGuard>
+                <SellerDashboard />
+              </SellerRouteGuard>
             }
           />
 

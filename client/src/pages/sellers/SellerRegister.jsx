@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import {
   Layout,
@@ -16,7 +16,7 @@ import "../../css/login.css";
 
 const { Content } = Layout;
 
-const SignUp = () => {
+function SellerRegister() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -38,20 +38,20 @@ const SignUp = () => {
       };
       try {
         setLoading(true);
-        const result = await axios.post("/api/users/register", user);
+        const result = await axios.post("/api/sellers/register", user);
         setLoading(false);
-        window.location.href = "/login";
+        window.location.href = "/seller-login";
       } catch (error) {
         console.log(error);
         setLoading(false);
         if (
           error.response &&
           error.response.status === 400 &&
-          error.response.data.error === "User with this email already exists."
+          error.response.data.error === "Seller with this email already exists."
         ) {
           notification.info({
-            message: "User Already Registered",
-            description: "The user with this email is already registered.",
+            message: "Seller Already Registered",
+            description: "The seller with this email is already registered.",
             placement: "topLeft",
             btn: (
               <button
@@ -59,7 +59,7 @@ const SignUp = () => {
                 type="primary"
                 size="small"
                 onClick={() => {
-                  window.location.href = "/login";
+                  window.location.href = "/seller-login";
                 }}
               >
                 Login
@@ -69,7 +69,7 @@ const SignUp = () => {
         } else {
           notification.error({
             message: "Registration Failed",
-            description: "An error occurred while registering the user.",
+            description: "An error occurred while registering the seller.",
           });
         }
       }
@@ -133,12 +133,14 @@ const SignUp = () => {
                 align=""
                 span={12}
               >
-                <h2 className="text-align-left">Sign up</h2>
+                <h2 className="text-align-left">Join Us</h2>
                 <p className="text-align-left">
-                  Let’s explore the world today
+                  List Your Places, Expand Your Reach
                   <br />
-                  Sign in to start managing your bookings.
+                  Register now for fast setup and start managing your listings
                 </p>
+
+                {/* Become a part of our platform and effortlessly showcase your properties to travelers worldwide.  */}
 
                 <Form
                   style={{
@@ -235,7 +237,7 @@ const SignUp = () => {
                 </Form>
                 <p className="text-align-center">
                   Already have an account?{" "}
-                  <a className="fw-medium" href="/login">
+                  <a className="fw-medium" href="/seller-login">
                     Log in
                   </a>
                 </p>
@@ -259,6 +261,6 @@ const SignUp = () => {
       </Layout>
     </Space>
   );
-};
+}
 
-export default SignUp;
+export default SellerRegister;

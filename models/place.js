@@ -61,6 +61,11 @@ const placeSchema = mongoose.Schema(
       default: false,
     },
     likedusers: [],
+    
+    isPublic: {
+      type: Boolean,
+      default: false
+  }
   },
   {
     timestamps: true,

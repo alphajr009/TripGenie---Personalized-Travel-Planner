@@ -12,8 +12,8 @@
     margin-bottom: 20px;
     padding: 13px 10px 3px 10px;
     border-radius: 20px;
-    border: 1px solid #4444AA;
-    background-color: #4444AA;
+    border: 1px solid #2e96d6;
+    background-color: #2e96d6;
     position: absolute;
     left: 50%;
     margin-top: 100px;
@@ -171,3 +171,17 @@
     padding: 20px 24px;
     width: fit-content;
 }
+
+.ant-table-wrapper .ant-table-thead>tr>th, :where(.css-dev-only-do-not-override-1vtf12y).ant-table-wrapper .ant-table-thead>tr>td {
+    position: relative;
+    color: rgba(0, 0, 0, 0.88);
+    font-weight: 600;
+    text-align: start;
+    background: #2e96d6;
+    border-bottom: 1px solid #f0f0f0;
+    color: #fafafa;
+    font-size: 15px;
+    font-family: "Sansation-Bold", sans-serif;
+}
+
+

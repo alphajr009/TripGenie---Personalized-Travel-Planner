@@ -3,7 +3,7 @@ import './createproperty.css';
 import { Input, Form, Select, notification } from 'antd';
 import axios from 'axios';
 import ImageUploader from '../ImageUploader';
-import UserFooter from '../footer/UserFooter';
+
 
 function CreateProperty() {
 
@@ -280,7 +280,7 @@ function CreateProperty() {
                 </div>
 
             </div>
-            <UserFooter />
+          
         </div>
     )
 }

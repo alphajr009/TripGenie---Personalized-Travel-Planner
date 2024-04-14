@@ -99,7 +99,7 @@
 
 .crb-slide1-roomslect-bar {
     height: 60px;
-    background-color: #4444AA;
+    background-color: #2e96d6;
     border-radius: 12px;
     padding-top: 10px;
     padding-left: 10px;
@@ -131,8 +131,8 @@
 }
 
 .ant-radio-wrapper .ant-radio-checked .ant-radio-inner {
-    border-color: #4444aa;
-    background-color: #4444aa;
+    border-color: #2e96d6;
+    background-color: #2e96d6;
 }
 
 .crb-slide1-roomslect-down-btn {
@@ -140,7 +140,7 @@
     margin-top: 20px;
     font-family: "Sansation-Bold", sans-serif;
     font-size: 16px;
-    background-color: #4444AA;
+    background-color: #2e96d6;
     color: rgb(255, 255, 255);
     border: none;
     border-radius: 10px;

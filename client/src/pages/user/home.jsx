@@ -1,4 +1,4 @@
-import React from "react";
+import React , {useState} from "react";
 import { Col, Row, } from "antd";
 import "../../css/Home.css";
 import "../../index.css";
@@ -12,6 +12,12 @@ import { useTranslation } from "react-i18next";
 
 function Home() {
 	const {t} =  useTranslation()
+	const [isIncreased, setIsIncreased] = useState(false);
+	const [isBlackAndWhite, setIsBlackAndWhite] = useState(false);
+	const [isMenuOpen, setIsMenuOpen] = useState(false);
+	const [fontFamilyIndex, setFontFamilyIndex] = useState(0);
+	const [highlightLinks, setHighlightLinks] = useState(false); 
+
 	return (
 		<div className="Home">
 			<Navbar></Navbar>

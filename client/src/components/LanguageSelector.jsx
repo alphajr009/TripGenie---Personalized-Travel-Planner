@@ -20,38 +20,28 @@ const LanguageSelector = () => {
   };
   return (
     <div className="btn-container">
-          {/* <select
-                value={i18n.language}
-                onChange={(e) => changeLanguage(e.target.value)}
-                >
-                {languages.map((lng) => (
-                <option key={lng.code} value={lng.code}>
-                {lng.lang}
-                </option>
-            ))}
-            </select> */}
-            <select
-    value={i18n.language}
-    onChange={(e) => changeLanguage(e.target.value)}
-    style={{
-        padding: '10px', 
-        borderRadius: '5px', 
-        border: '1px solid #ccc', 
-        backgroundColor: '#f7f7f7',  
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'right center', 
-        paddingRight: '30px', 
-        appearance: 'none', 
-        WebkitAppearance: 'none', 
-        MozAppearance: 'none', 
-    }}
->
-    {languages.map((lng) => (
-        <option key={lng.code} value={lng.code}>
-            {lng.lang}
-        </option>
-    ))}
-</select>
+      <select
+          value={i18n.language}
+          onChange={(e) => changeLanguage(e.target.value)}
+          style={{
+              padding: '10px', 
+              borderRadius: '5px', 
+              border: '1px solid #ccc', 
+              backgroundColor: '#f7f7f7',  
+              backgroundRepeat: 'no-repeat',
+              backgroundPosition: 'right center', 
+              paddingRight: '30px', 
+              appearance: 'none', 
+              WebkitAppearance: 'none', 
+              MozAppearance: 'none', 
+          }}
+      >
+          {languages.map((lng) => (
+              <option key={lng.code} value={lng.code}>
+                  {lng.lang}
+              </option>
+          ))}
+      </select>
 
     </div>
   );

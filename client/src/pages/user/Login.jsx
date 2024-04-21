@@ -13,6 +13,7 @@ import {
 } from "antd";
 
 import "../../css/login.css";
+import { useTranslation } from "react-i18next";
 
 const { Content } = Layout;
 
@@ -21,6 +22,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [isRememberMe, setIsRememberMe] = useState(false);
+  const {t} = useTranslation();
 
   const handleRememberMeChange = (e) => {
     setIsRememberMe(e.target.checked);
@@ -86,11 +88,11 @@ const Login = () => {
           <Row className="main-col">
             <Col className="form-section" span={12}>
               <Col className="innter-form-section" span={12}>
-                <h1 className="text-align-left">Login</h1>
+                <h1 className="text-align-left">{t("Login")}</h1>
                 <p className="text-align-left">
-                  Let’s explore the world today
+                  {t("LoginHeader")}
                   <br />
-                  Sign in to start managing your bookings.
+                  {t("LoginHeader2")}
                 </p>
 
                 <Form
@@ -105,7 +107,7 @@ const Login = () => {
                   autoComplete="off"
                 >
                   <div className="m-8">
-                    <label className="text-align-left m-8">Email</label>
+                    <label className="text-align-left m-8">{t("Email")}</label>
                   </div>
                   <div>
                     <Form.Item
@@ -124,7 +126,7 @@ const Login = () => {
                     </Form.Item>
                   </div>
                   <div className="m-8">
-                    <label className="text-align-left m-8">Password</label>
+                    <label className="text-align-left m-8">{t("Password")}</label>
                   </div>
                   <Form.Item
                     name="password"
@@ -153,7 +155,7 @@ const Login = () => {
                       type="primary"
                       htmlType="submit"
                     >
-                      Login
+                      {t("Login")}
                     </Button>
                   </Form.Item>
                 </Form>
@@ -169,16 +171,16 @@ const Login = () => {
                           : "Click to Remember"
                       }
                     >
-                      Remember me
+                      {t("Remember")}
                     </a>
                   </Checkbox>{" "}
-                  <a href="/forget-password">Forgot password</a>{" "}
+                  <a href="/forget-password">{t("ForgotPW")}</a>{" "}
                 </div>
                 <div className="login-acc-have">
                   <p className="text-align-center">
-                    Don't you have an account?{" "}
+                    {t("SignupDescription")}{" "}
                     <a className="fw-medium" href="/signup">
-                      Sign up
+                      {t("SignUp")}
                     </a>{" "}
                   </p>
                 </div>

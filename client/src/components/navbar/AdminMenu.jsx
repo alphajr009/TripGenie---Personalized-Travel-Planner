@@ -1,23 +1,28 @@
 import React, { Component } from "react";
 import { Menu, Avatar, Dropdown } from 'antd';
 import {GlobalOutlined} from '@ant-design/icons';
-
+import { useTranslation } from "react-i18next";
 
 const avatarStyle = {
     color: '#000000',
     backgroundColor: 'transparent'
   };
+
+  const withTranslationClass = (WrappedComponent) => {
+    return function WithTranslationClass(props) {
+        const { t } = useTranslation();
+        return <WrappedComponent {...props} t={t} />;
+    };
+};
   
 class AdminMenu extends Component {
+  
   render() {
-
-    
+    const {t} = this.props;
     const languageMenu = (
         <Menu>
           <Menu.Item key="english">English</Menu.Item>
           <Menu.Item key="french">French</Menu.Item>
-          <Menu.Item key="hindi">Hindi</Menu.Item>
-          <Menu.Item key="tamil">Tamil</Menu.Item>
         </Menu>
       );
 
@@ -45,4 +50,4 @@ class AdminMenu extends Component {
   }
 }
 
-export default AdminMenu;
+export default withTranslationClass(AdminMenu);

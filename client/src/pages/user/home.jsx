@@ -8,13 +8,15 @@ import PlaceCard from "../../components/PlaceCard";
 import Categories from "../../components/CategoriesCard";
 import ExploreSlider from "../../components/ExploreSlider";
 import UserFooter from "../../components/footer/UserFooter";
+import { useTranslation } from "react-i18next";
 
 function Home() {
+	const {t} =  useTranslation()
 	return (
 		<div className="Home">
 			<Navbar></Navbar>
 			<Slider></Slider>
-			<h2 className="text-align-center">Explore Sri Lanka</h2>
+			<h2 className="text-align-center">{t("greeting")}</h2>
 			<Row className="main-container-padding">
 
 
@@ -23,7 +25,7 @@ function Home() {
 				</Col>
 
 			</Row>
-			<h2 className="text-align-center">Categories</h2>
+			<h2 className="text-align-center">{t("Categories")}</h2>
 			<Categories></Categories>
 			<UserFooter />
 		</div>

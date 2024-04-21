@@ -1,43 +1,42 @@
 import React, { Component } from 'react';
 import { Menu, Avatar, Dropdown } from 'antd';
 import { GlobalOutlined } from '@ant-design/icons';
+import LanguageSelector from '../LanguageSelector';
+import { useTranslation } from "react-i18next";
 
 const avatarStyle = {
   color: '#000000',
   backgroundColor: 'transparent'
 };
 
+const withTranslationClass = (WrappedComponent) => {
+  return function WithTranslationClass(props) {
+      const { t } = useTranslation();
+      return <WrappedComponent {...props} t={t} />;
+  };
+};
+
 class LeftMenu extends Component {
   render() {
     const user = JSON.parse(localStorage.getItem('currentUser'));
     const isAdmin = user && user.isAdmin;
-
-    const languageMenu = (
-      <Menu>
-        <Menu.Item key="english">English</Menu.Item>
-        <Menu.Item key="french">French</Menu.Item>
-        <Menu.Item key="hindi">Hindi</Menu.Item>
-        <Menu.Item key="tamil">Tamil</Menu.Item>
-      </Menu>
-    );
+    const {t} = this.props;
 
     return (
       <Menu mode="horizontal">
         <>
           <Menu.Item key="language">
-            <Dropdown overlay={languageMenu} placement="bottomCenter">
-              <Avatar icon={<GlobalOutlined />} style={avatarStyle} />
-            </Dropdown>
+            <Avatar icon = {<LanguageSelector/>} style={avatarStyle} />
           </Menu.Item>
           
           <Menu.Item key="mail">
-            <a href="/home">Home</a>
+            <a href="/home">{t("Home")}</a>
           </Menu.Item>
           <Menu.Item key="location">
-            <a href="/locations">Locations</a>
+            <a href="/locations">{t("Locations")}</a>
           </Menu.Item>
           <Menu.Item key="favourites">
-            <a href="/trips">Trips</a>
+            <a href="/trips">{t("Trips")}</a>
           </Menu.Item>
         </>
 
@@ -46,4 +45,4 @@ class LeftMenu extends Component {
   }
 }
 
-export default LeftMenu;
+export default withTranslationClass(LeftMenu);

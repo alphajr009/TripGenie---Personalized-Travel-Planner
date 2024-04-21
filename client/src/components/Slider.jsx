@@ -2,16 +2,15 @@ import { useEffect, useState } from "react";
 import { Button, Carousel, Col, Tooltip } from "antd";
 import { Input } from "antd";
 import { useLocation, useNavigate } from "react-router-dom";
-
+import { useTranslation } from "react-i18next";
 import "../css/slider.css";
-
-
 
 
 const Slider = () => {
 
 	const location = useLocation();
 	const searchValue1 = location.state?.search || "";
+	const {t} = useTranslation();
 
 	useEffect(() => {
 		setSearchValue(searchValue1);
@@ -52,11 +51,9 @@ const Slider = () => {
 			</Carousel>
 
 			<Col className="slider-content" span={8}>
-				<h1 className="text-align-center">Make Your Dream Trip </h1>
+				<h1 className="text-align-center">{t("header")}</h1>
 				<p>
-					Discover the best places to visit, eat, and stay in any location. Explore exciting activities,
-					indulge in delicious cuisine, and book accommodations that suit your style.
-					Create unforgettable memories with ease, all in one place
+					{t("headerDescription")}
 				</p>
 
 				<div className="search-bar">
@@ -74,7 +71,7 @@ const Slider = () => {
 						/>
 					</Tooltip>
 					<Button type="primary" size="large" onClick={handleSearch}>
-						Search
+						{t("Search")}
 					</Button>
 				</div>
 			</Col>

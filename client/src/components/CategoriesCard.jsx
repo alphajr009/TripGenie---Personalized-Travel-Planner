@@ -3,9 +3,11 @@ import { Tabs } from "antd";
 import Do from "./Do";
 import Eat from "./Eat";
 import Stay from "./Stay";
+import { useTranslation } from "react-i18next";
 
 const App = () => {
   const [activeTab, setActiveTab] = useState("1");
+  const {t} = useTranslation();
 
   const handleTabChange = (key) => {
     setActiveTab(key);
@@ -32,9 +34,9 @@ const App = () => {
         activeKey={activeTab}
         onChange={handleTabChange}
       >
-        <Tabs.TabPane tab="Do" key="1" />
-        <Tabs.TabPane tab="Eat" key="2" />
-        <Tabs.TabPane tab="Stay" key="3" />
+        <Tabs.TabPane tab={t("Do")} key="1" />
+        <Tabs.TabPane tab={t("Eat")} key="2" />
+        <Tabs.TabPane tab={t("Stay")} key="3" />
       </Tabs>
 
       {renderContent(activeTab)}

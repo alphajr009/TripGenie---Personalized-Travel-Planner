@@ -13,6 +13,7 @@ const placeRoute = require("./routes/placesRoute");
 const reviewRoute = require("./routes/reviewsRoute");
 const tripRoute = require("./routes/tripsRoute");
 const emailRoute = require("./routes/emailRoute");
+const propertyRoute = require("./routes/propertyRoute");
 
 app.use(helmet());
 app.use(cors());
@@ -39,6 +40,7 @@ app.use("/api/places", placeRoute);
 app.use("/api/reviews", reviewRoute);
 app.use("/api/trips", tripRoute);
 app.use("/api/email", emailRoute);
+app.use("/api/property", propertyRoute);
 
 const port = process.env.PORT;
 

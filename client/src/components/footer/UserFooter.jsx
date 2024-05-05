@@ -3,10 +3,21 @@ import "./userfooter.css"
 import logo from "../../assets/tripgenielogo.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebookSquare, faInstagram, faPinterestSquare, faRedditSquare, faTwitterSquare } from '@fortawesome/free-brands-svg-icons';
+import { useState } from 'react';
 
 function UserFooter() {
+    const [isIncreased, setIsIncreased] = useState(false);
+  
+    const toggleFontSize = () => {
+      setIsIncreased(prevState => !prevState);
+    };
+
     return (
         <div className='footer'>
+               <button onClick={toggleFontSize}>
+                    {isIncreased ? 'Font Size' : 'Font Size'}
+                    {/* style={{ fontSize: isIncreased ? '30px' : '20px' }} */}
+                </button>
             <div className="logo-container">
                 <img className="footer-logo" src={logo} alt="Logo" />
             </div>

@@ -3,6 +3,7 @@ import { Menu, Avatar, Dropdown } from 'antd';
 import { GlobalOutlined } from '@ant-design/icons';
 import LanguageSelector from '../LanguageSelector';
 import { useTranslation } from "react-i18next";
+import "../../css/Theme.css";
 
 const avatarStyle = {
   color: '#000000',
@@ -12,17 +13,22 @@ const avatarStyle = {
 const withTranslationClass = (WrappedComponent) => {
   return function WithTranslationClass(props) {
       const { t } = useTranslation();
-      return <WrappedComponent {...props} t={t} />;
+      const { isBlackAndWhite, toggleTheme } = props;
+      return <WrappedComponent {...props} t={t} isBlackAndWhite={isBlackAndWhite} toggleTheme={toggleTheme} />;
   };
 };
 
 class LeftMenu extends Component {
+
   render() {
     const user = JSON.parse(localStorage.getItem('currentUser'));
     const isAdmin = user && user.isAdmin;
     const {t} = this.props;
+    const { isBlackAndWhite } = this.props;
+    const { toggleTheme } = this.props;
 
     return (
+      <div className={`nav ${isBlackAndWhite ? 'black-and-white' : ''}`}>
       <Menu mode="horizontal">
         <>
           <Menu.Item key="language">
@@ -41,6 +47,7 @@ class LeftMenu extends Component {
         </>
 
       </Menu>
+      </div>
     );
   }
 }

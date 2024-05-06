@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component , useState} from "react";
 import LeftMenu from "./LeftMenu";
 import RightMenu from "./RightMenu";
 import { Drawer, Button } from "antd";
@@ -8,10 +8,12 @@ import "../../css/navigationBar.css";
 import AdminMenu from "./AdminMenu";
 
 class Navbar extends Component {
+
   state = {
     current: "mail",
     visible: false,
     isMobileView: false,
+    isBlackAndWhite: false,
   };
 
   componentDidMount() {
@@ -40,13 +42,21 @@ class Navbar extends Component {
     });
   };
 
+  toggleBlackAndWhite = () => {
+    this.setState((prevState) => ({
+      isBlackAndWhite: !prevState.isBlackAndWhite,
+    }));
+  };
+
   render() {
     const { isMobileView } = this.state;
+    const { isBlackAndWhite } = this.state;
 
     const user = JSON.parse(localStorage.getItem("currentUser"));
     const isAdmin = user && user.isAdmin;
 
     return (
+        <div className={`nav ${isBlackAndWhite ? 'black-and-white' : ''}`}>
       <nav className="menuBar">
         <div className="logo">
           <a href="/home">
@@ -58,7 +68,7 @@ class Navbar extends Component {
             <>
               {!isAdmin && (
                 <div className="leftMenu">
-                  <LeftMenu />
+                  <LeftMenu toggleTheme={this.toggleBlackAndWhite}/>
                 </div>
               )}
 
@@ -98,6 +108,7 @@ class Navbar extends Component {
           )}
         </div>
       </nav>
+        </div>
     );
   }
 }

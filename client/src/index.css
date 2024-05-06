@@ -1,4 +1,4 @@
-@font-face {
+ @font-face {
 	font-family: "SF Pro Display-Regular";
 	font-style: normal;
 	font-weight: 400;
@@ -92,8 +92,8 @@ p {
 }
 
 h2 {
-	font-family: "SF Pro Display-Regular";
-	font-size: 39px !important;
+	/* font-family: "SF Pro Display-Regular"; */
+	/* font-size: 39px !important; */
 	margin-bottom: 8px;
 }
 
@@ -134,7 +134,7 @@ h2 {
 
 .text-align-center {
 	text-align: center !important;
-	font-family: "SF Pro Display-Regular";
+	/* font-family: "SF Pro Display-Regular"; */
 }
 
 .space {
@@ -234,4 +234,4 @@ h2 {
 
 .tripplan-body-content .slick-track {
 	margin-left: 0 !important;
-}
+} 

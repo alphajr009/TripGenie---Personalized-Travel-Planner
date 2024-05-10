@@ -7,6 +7,9 @@ import { Button, Card, Col } from "antd";
 import Slider from "react-slick";
 import { FilePdfOutlined } from "@ant-design/icons";
 import jsPDF from "jspdf";
+import Logo from "../../assets/logoT.png"; 
+
+
 
 function Place({ place }) {
   return (
@@ -130,21 +133,72 @@ function TripPage() {
   async function downloadReceipt() {
     const doc = new jsPDF();
 
-    // doc.setFont("helvetica")
-    // doc.setFontSize(17);
-    doc.text(`${trips.tripname}`, 52, 85);
-    // doc.text(`${booking._id}`, 52, 85);
+    const logoImgData = await fetch(Logo).then(response => response.blob());
+    const logoBase64Img = await blobToBase64(logoImgData);
+    doc.addImage(logoBase64Img, 'JPEG', 15, 10, 50, 20);
 
-    // doc.setFont("helvetica")
-    // doc.setFontSize(14);
-    // doc.text(`${booking.room}`, 49, 115.5);
-    // doc.text(`${booking.fromdate}`, 49, 126.5);
-    // doc.text(`${booking.todate}`, 49.7, 137.5);
-    // doc.text(`0${booking.totaldays}`, 50, 148.7);
-    // doc.text(`Rs. ${booking.totalamount}/-`, 50, 159.6);
+    doc.setFont('helvetica', 'bold')
+    doc.setFontSize(16);
+    doc.text(20, 38, `${trips.tripname}`);
 
-    doc.save(`Invoice_${trips.tripname}.pdf`);
-  }
+    // Add cover page
+    const coverImgData = await fetch(`/uploads/${params.tripid}.jpg`).then(response => response.blob());
+    const coverBase64Img = await blobToBase64(coverImgData);
+    doc.addImage(coverBase64Img, 'JPEG', 20, 42, 170, 110);
+    
+    // Add trip details to the PDF
+    let yPosition = 158; 
+    const addSection = async (title, places) => { 
+      doc.setFont("georgia" ,'bold'); 
+        doc.setFontSize(14);
+        doc.text(15, yPosition, title);
+        yPosition += 2; // Increase y-position for space after title
+        for (let index = 0; index < places.length; index++) {
+            if (yPosition > 250) { 
+                doc.addPage();
+                yPosition = 20; 
+            }
+            const place = places[index];
+            const imgData = await fetch(`/uploads/${place._id}-0.jpg`).then(response => response.blob());
+            const base64Img = await blobToBase64(imgData);
+            doc.addImage(base64Img, 'JPEG', 20, yPosition, 70, 50);
+            doc.setFont('helvetica', 'bold')
+            doc.setFontSize(12);
+            doc.setFont('helvetica', 'normal')
+            doc.text(`${place.name}`, 110, yPosition + 20);
+            doc.setFont('helvetica', 'normal')
+            doc.text('Address: ', 110, yPosition + 26);
+            // doc.setFont('helvetica', 'normal')
+            const lines = doc.splitTextToSize(place.address, 75); // Break address into multiple lines
+            for (let i = 0; i < lines.length; i++) {
+                doc.text(lines[i], 128, yPosition + 26 + (i * 6)); // Adjust the increment value (6) as needed for spacing between lines
+            }
+            
+            yPosition += 60; 
+        }
+        yPosition += 3; // Increase y-position for space after section
+    };
+    
+    await addSection("Do", doPlaces);
+    await addSection("Eat", eatPlaces); 
+    await addSection("Stay", stayPlaces); 
+    
+    // Save the PDF with a filename
+    doc.save(`${trips.tripname}.pdf`);
+}
+
+
+// Function to convert blob to Base64
+function blobToBase64(blob) {
+    return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onloadend = () => resolve(reader.result);
+        reader.onerror = reject;
+        reader.readAsDataURL(blob);
+    });
+}
+
+
 
   return (
     <div className="place-page">
@@ -164,9 +218,9 @@ function TripPage() {
           <p>You can manage your trip easily from here</p>
 
           <div className="download-button-container">
-            <Button onClick={() => downloadReceipt}>
+            <Button onClick={() => downloadReceipt()}>
               <FilePdfOutlined />
-              Downlaod
+              Download
             </Button>
           </div>
         </div>

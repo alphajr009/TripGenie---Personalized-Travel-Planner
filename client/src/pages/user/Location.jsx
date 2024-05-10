@@ -6,10 +6,14 @@ import { Button, Card, Col, Empty, Pagination, Row, Tooltip } from "antd";
 import { DeleteOutlined } from "@ant-design/icons";
 import axios from "axios";
 import { FireOutlined } from "@ant-design/icons";
+import { useTranslation } from "react-i18next";
 
 function Place({ place }) {
+  const {t} = useTranslation();
+
   const handleDelete = async (placeid) => {
     const user = JSON.parse(localStorage.getItem("currentUser"));
+    
 
     if (!user) {
       window.location.href = "/login";
@@ -56,7 +60,7 @@ function Place({ place }) {
           <p>{place.name}</p>
 
           <Button onClick={() => window.open(`/place/${place._id}`, "_blank")}>
-            View
+            {t("View")}
           </Button>
         </div>
       </Card>
@@ -69,6 +73,8 @@ function Location() {
   const placesPerPage = 8;
   const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(true);
+  const {t} = useTranslation();
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -108,16 +114,17 @@ function Location() {
               imageStyle={{ height: 60 }}
               description={
                 <span>
-                  <h6>Here are 3 simple steps to get you started:</h6>
+                  <h6>{t("LocationDes1")}</h6>
                   <div className="location-step-txt">
                     {" "}
-                    1. Search for a location to plan your trip
+                    {t("LocationDes2")}
                   </div>
                   <div className="location-step-txt">
-                    2. Tap the fire icon when you find a location you like
+                    {t("LocationDes3")}
                   </div>
                   <div className="location-step-txt">
-                    3. You'll find everything you've saved here
+                    {t("LocationDes4")}
+
                   </div>
                 </span>
               }
@@ -126,7 +133,7 @@ function Location() {
                 type="primary"
                 onClick={() => (window.location.href = "/home")}
               >
-                Start Searching
+                {t("startBtn")}
               </Button>
             </Empty>
           </div>

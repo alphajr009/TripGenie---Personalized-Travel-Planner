@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'font1';
+    src: url('../fonts/SFPro-Display-Regular.ttf') format('truetype');
+  }
+
+@font-face {
+    font-family: 'font3';
+    src: url('../fonts/SFPro-Bold.ttf') format('truetype');
+  }
+
+@font-face {
+    font-family: 'font4';
+    src: url('../fonts/SFPro-Medium.otf') format('truetype');
+  }
+
+@font-face {
+    font-family: 'font2';
+    src: url('../fonts/OpenDyslexicAlta-Regular.otf') format('truetype');
+  }

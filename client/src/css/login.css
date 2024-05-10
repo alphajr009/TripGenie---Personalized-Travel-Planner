@@ -100,3 +100,8 @@ input {
   margin-top: 20px;
   text-align: center;
 }
+
+.highlighted-link {
+  color: red;
+  font-weight: bold;
+}

@@ -16,6 +16,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { LockOutlined } from "@ant-design/icons";
 import UserFooter from "../components/footer/UserFooter";
+import { useTranslation } from "react-i18next";
 
 function Account() {
   const user = JSON.parse(localStorage.getItem("currentUser"));
@@ -30,7 +31,7 @@ function Account() {
   const [address, setAddress] = useState("");
   const [preferences, setPreferences] = useState([]);
   const { location } = window;
-
+  const {t} = useTranslation();
   const [pageLoaded, setPageLoaded] = useState(false);
 
   useEffect(() => {
@@ -270,7 +271,7 @@ function Account() {
                     },
                   ]}
                 >
-                  <label>Name</label>
+                  <label>{t("Name")}</label>
                   <Input
                     value={name}
                     placeholder="Name"
@@ -287,7 +288,7 @@ function Account() {
                     },
                   ]}
                 >
-                  <label>City</label>
+                  <label>{t("City")}</label>
                   <Input
                     value={city}
                     placeholder="City"
@@ -304,14 +305,14 @@ function Account() {
                     },
                   ]}
                 >
-                  <label>Gender: </label>
+                  <label>{t("Gender")}</label>
                   <Radio.Group
                     value={gender}
                     onChange={(e) => setGender(e.target.value)}
                     disabled={!editMode}
                   >
-                    <Radio value="male">Male</Radio>
-                    <Radio value="female">Female</Radio>
+                    <Radio value="male">{t("Male")}</Radio>
+                    <Radio value="female">{t("Female")}</Radio>
                   </Radio.Group>
                 </Form.Item>
                 <Form.Item
@@ -323,7 +324,7 @@ function Account() {
                     },
                   ]}
                 >
-                  <label>Phone Number</label>
+                  <label>{t("Phone")}</label>
                   <Input
                     value={phone}
                     placeholder={phone}
@@ -334,7 +335,7 @@ function Account() {
               </Col>
               <Col span={12}>
                 <Form.Item name="email">
-                  <label>Email</label>
+                  <label>{t("Email")}</label>
                   <Input
                     placeholder={email}
                     disabled={true}
@@ -351,7 +352,7 @@ function Account() {
                     },
                   ]}
                 >
-                  <label>Address</label>
+                  <label>{t("Address")}</label>
                   <TextArea
                     value={address}
                     rows={4}
@@ -375,7 +376,7 @@ function Account() {
                       },
                     ]}
                   >
-                    <label>Preferences: </label>
+                    <label>{t("Preferences")}</label>
                     <Select
                       mode="multiple"
                       allowClear
@@ -398,7 +399,7 @@ function Account() {
                     htmlType="submit"
                     onClick={onSaveButtonClick1}
                   >
-                    Save
+                    {t("Save")}
                   </Button>{" "}
                 </Form.Item>
               </Col>

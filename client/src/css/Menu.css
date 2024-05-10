@@ -1,0 +1,63 @@
+.menu-container {
+    position: fixed;
+    top: 650px; /* Adjust the top position as needed */
+    right: 50px; /* Adjust the right position as needed */
+    z-index: 1000; /* Ensure menu is on top of other elements */
+  }
+  
+  .icon-container {
+    cursor: pointer;
+    font-size: 24px; /* Adjust the size of the icon */
+    color: #333; /* Color of the icon */
+  }
+  
+  .popup-menu {
+    position: fixed;
+    top: 400px; /* Adjust the top position as needed */
+    right: 80px; /* Adjust the right position as needed */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 999; /* Ensure menu is below the icon */
+    max-height: calc(100vh - 100px); /* Adjust max-height to fit your layout */
+    overflow-y: auto; /* Enable scrolling if content exceeds max-height */
+  }
+  
+  .popup-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .popup-menu ul li {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .popup-menu ul li:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .popup-menu button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .popup-menu button:hover {
+    background-color: #0056b3;
+  }

@@ -7,3 +7,13 @@
 .location-card {
     padding: 0px 20px;
 }
+
+.home.black-and-white {
+    background-color: rgb(59, 59, 59);
+    color: white;
+  }
+
+.highlighted-link {
+    color: red; 
+    font-weight: bold; 
+  }

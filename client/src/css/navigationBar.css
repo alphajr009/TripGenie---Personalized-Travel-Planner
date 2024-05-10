@@ -4,7 +4,7 @@
 	flex-direction: row;
 	justify-content: space-between;
 	padding: 12px 12px;
-	background: #fff;
+	/* background: #fff; */
 	font-family: "SF Pro Display-Medium" !important;
 	align-items: center;
 }
@@ -22,3 +22,7 @@
 	border-bottom: none !important;
 }
 
+.nav.black-and-white {
+    background-color: rgb(59, 59, 59);
+    color: white;
+  }

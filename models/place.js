@@ -42,10 +42,6 @@ const placeSchema = mongoose.Schema(
       type: String,
       required: true,
     },
-    sellerId: {
-      type: String,
-      required: true,
-    },
     likes: {
       type: Number,
       required: false,

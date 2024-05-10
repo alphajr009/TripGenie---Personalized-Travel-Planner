@@ -146,7 +146,7 @@ function Place() {
     updatedGoogleMaplink
   ) {
     try {
-      await axios.patch("/api/places/editblog", {
+      await axios.patch("/api/places/editplace", {
         _id,
         title: updatedBlogTitle,
         description: description,

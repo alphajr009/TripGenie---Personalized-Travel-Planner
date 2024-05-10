@@ -31,7 +31,7 @@ class LeftMenu extends Component {
       <div className={`nav ${isBlackAndWhite ? 'black-and-white' : ''}`}>
       <Menu mode="horizontal">
         <>
-          <Menu.Item key="language">
+          <Menu.Item key="language" >
             <Avatar icon = {<LanguageSelector/>} style={avatarStyle} />
           </Menu.Item>
           
@@ -45,7 +45,6 @@ class LeftMenu extends Component {
             <a href="/trips">{t("Trips")}</a>
           </Menu.Item>
         </>
-
       </Menu>
       </div>
     );
@@ -53,3 +52,4 @@ class LeftMenu extends Component {
 }
 
 export default withTranslationClass(LeftMenu);
+

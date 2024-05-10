@@ -68,7 +68,7 @@ class Navbar extends Component {
             <>
               {!isAdmin && (
                 <div className="leftMenu">
-                  <LeftMenu toggleTheme={this.toggleBlackAndWhite}/>
+                  <LeftMenu isBlackAndWhite={isBlackAndWhite} toggleTheme={this.toggleBlackAndWhite} />
                 </div>
               )}
 

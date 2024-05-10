@@ -4,13 +4,22 @@ import { Input } from "antd";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import "../css/slider.css";
+import "../css/font.css";
 
 
-const Slider = () => {
+const Slider = ({ 
+	toggleFontSize,
+	isIncreased,
+	toggleFontFamily,
+	fontFamilyIndex,
+	toggleMenu }) =>  {
 
 	const location = useLocation();
 	const searchValue1 = location.state?.search || "";
 	const {t} = useTranslation();
+
+	const fontFamilietwo = ['font3', 'font2'];
+	
 
 	useEffect(() => {
 		setSearchValue(searchValue1);
@@ -51,8 +60,10 @@ const Slider = () => {
 			</Carousel>
 
 			<Col className="slider-content" span={8}>
-				<h1 className="text-align-center">{t("header")}</h1>
-				<p>
+				<h1 className="text-align-center" style={{ fontSize: isIncreased ? '43px' : '39px', fontFamily: fontFamilietwo[fontFamilyIndex] }}>
+					{t("header")}
+				</h1>
+				<p style={{ fontSize: isIncreased ? '14px' : '12px', fontFamily: fontFamilietwo[fontFamilyIndex] }}>
 					{t("headerDescription")}
 				</p>
 

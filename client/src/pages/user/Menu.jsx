@@ -12,9 +12,9 @@ const Menu = ({ isMenuOpen, toggleMenu, toggleFontSize, isIncreased, toggleTheme
       {isMenuOpen && (
         <div className="popup-menu">
           <ul>
-            <li><button onClick={toggleFontSize}>{isIncreased ? 'Font Size' : 'Font Size'}</button></li>
-            <li><button onClick={toggleTheme}>{isBlackAndWhite ? 'Theme' : 'Theme'}</button></li>
-            <li><button onClick={toggleFontFamily}>Font</button></li>
+            <li><button onClick={toggleFontSize}>{isIncreased ? 'Max' : 'Min'}</button></li>
+            <li><button onClick={toggleTheme}>{isBlackAndWhite ? 'Dark' : 'Light'}</button></li>
+            <li><button onClick={toggleFontFamily}>Dyslexia</button></li>
             <li><button onClick={toggleHighlightLinks}>Links</button></li>
           </ul>
         </div>

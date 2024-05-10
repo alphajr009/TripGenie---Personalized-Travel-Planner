@@ -14,6 +14,8 @@ import {
 
 import "../../css/login.css";
 import { useTranslation } from "react-i18next";
+import Menu from './Menu'
+import "../../css/Theme.css"
 
 const { Content } = Layout;
 
@@ -23,6 +25,16 @@ const Login = () => {
   const [loading, setLoading] = useState(false);
   const [isRememberMe, setIsRememberMe] = useState(false);
   const {t} = useTranslation();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isBlackAndWhite, setIsBlackAndWhite] = useState(false);
+  const [isIncreased, setIsIncreased] = useState(false);
+  const [fontFamilyIndex, setFontFamilyIndex] = useState(0);
+  const [highlightLinks, setHighlightLinks] = useState(false); 
+
+
+  const fontFamiliesone = ['font1', 'font2'];
+	const fontFamilietwo = ['font3', 'font2'];
+
 
   const handleRememberMeChange = (e) => {
     setIsRememberMe(e.target.checked);
@@ -34,6 +46,26 @@ const Login = () => {
       description,
       placement: "topLeft",
     });
+  };
+
+  const toggleHighlightLinks = () => {
+		setHighlightLinks(prevState => !prevState);
+	  };
+
+  const toggleFontFamily = () => {
+		setFontFamilyIndex(prevIndex => (prevIndex + 1) % fontFamiliesone.length, fontFamilietwo.length);
+	  };
+
+  const toggleFontSize = () => {
+		setIsIncreased(prevState => !prevState);
+	  };
+
+  const toggleTheme = () => {
+		setIsBlackAndWhite(prevState => !prevState);
+	  };
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
 
   const onFinish = (values) => {
@@ -83,13 +115,25 @@ const Login = () => {
       size={[0, 48]}
       className="space"
     >
-      <Layout>
+      <Layout className={`nav ${isBlackAndWhite ? 'black-and-white' : ''}`}>
         <Content>
+        <Menu
+            isMenuOpen={isMenuOpen}
+            toggleMenu={toggleMenu}
+            toggleTheme={toggleTheme}
+            isIncreased={isIncreased}
+            toggleFontFamily={toggleFontFamily}
+            toggleFontSize={toggleFontSize}
+            fontFamilietwo={fontFamilietwo}
+            toggleHighlightLinks={toggleHighlightLinks} 
+            isBlackAndWhite={isBlackAndWhite}
+
+          />
           <Row className="main-col">
             <Col className="form-section" span={12}>
               <Col className="innter-form-section" span={12}>
-                <h1 className="text-align-left">{t("Login")}</h1>
-                <p className="text-align-left">
+                <h1 className="text-align-left" style={{ fontSize: isIncreased ? '35px' : '25px', fontFamily: fontFamilietwo[fontFamilyIndex]}}>{t("Login")}</h1>
+                <p className="text-align-left" style={{ fontSize: isIncreased ? '16px' : '12px', fontFamily: fontFamilietwo[fontFamilyIndex]}}>
                   {t("LoginHeader")}
                   <br />
                   {t("LoginHeader2")}
@@ -107,7 +151,9 @@ const Login = () => {
                   autoComplete="off"
                 >
                   <div className="m-8">
-                    <label className="text-align-left m-8">{t("Email")}</label>
+                    <div className={`nav ${isBlackAndWhite ? 'black-and-white' : ''}`}>
+                      <label className="text-align-left m-8" style={{ fontSize: isIncreased ? '30px' : '20px', fontFamily: fontFamilietwo[fontFamilyIndex]}}>{t("Email")}</label>
+                    </div>
                   </div>
                   <div>
                     <Form.Item
@@ -126,7 +172,9 @@ const Login = () => {
                     </Form.Item>
                   </div>
                   <div className="m-8">
-                    <label className="text-align-left m-8">{t("Password")}</label>
+                    <div className={`nav ${isBlackAndWhite ? 'black-and-white' : ''}`}>
+                      <label className="text-align-left m-8" style={{ fontSize: isIncreased ? '30px' : '20px', fontFamily: fontFamilietwo[fontFamilyIndex]}}>{t("Password")}</label>
+                    </div>
                   </div>
                   <Form.Item
                     name="password"
@@ -154,6 +202,7 @@ const Login = () => {
                       className="login-btn"
                       type="primary"
                       htmlType="submit"
+                      style={{ fontSize: isIncreased ? '30px' : '20px', fontFamily: fontFamilietwo[fontFamilyIndex]}}
                     >
                       {t("Login")}
                     </Button>
@@ -170,20 +219,21 @@ const Login = () => {
                           ? "You are Remembered!"
                           : "Click to Remember"
                       }
-                    >
+                      className={`nav ${isBlackAndWhite ? 'black-and-white' : ''}`} style={{ fontSize: isIncreased ? '17px' : '14px', fontFamily: fontFamilietwo[fontFamilyIndex]}}>
                       {t("Remember")}
                     </a>
                   </Checkbox>{" "}
-                  <a href="/forget-password">{t("ForgotPW")}</a>{" "}
+                  
+                  <a href="/forget-password" className={`nav ${isBlackAndWhite ? 'black-and-white' : ''}`} style={{ fontSize: isIncreased ? '17px' : '14px', fontFamily: fontFamilietwo[fontFamilyIndex]}}>{t("ForgotPW")}</a>{" "}
                 </div>
                 <div className="login-acc-have">
-                  <p className="text-align-center">
+                  <p className="text-align-center" style={{ fontSize: isIncreased ? '17px' : '14px', fontFamily: fontFamilietwo[fontFamilyIndex]}}>
                     {t("SignupDescription")}{" "}
-                    <a className="fw-medium" href="/signup">
+                    <a className={`fw-medium ${highlightLinks ? 'highlighted-link' : ''}`} href="/signup" style={{ fontSize: isIncreased ? '17px' : '14px', fontFamily: fontFamilietwo[fontFamilyIndex]}}>
                       {t("SignUp")}
                     </a>{" "}
                   </p>
-                </div>
+                  </div>
               </Col>
             </Col>
             <Col

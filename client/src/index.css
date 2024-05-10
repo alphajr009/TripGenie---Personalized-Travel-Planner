@@ -44,7 +44,7 @@ body {
 
 h1 {
 	font-family: "SF Pro Display-Medium";
-	font-size: 40px !important;
+	/* font-size: 40px !important; */
 	margin-top: 0px;
 	margin-bottom: 20px;
 }

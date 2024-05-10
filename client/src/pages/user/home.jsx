@@ -60,8 +60,12 @@ function Home() {
 				toggleHighlightLinks={toggleHighlightLinks} 
 			/>
 					<Navbar isBlackAndWhite={isBlackAndWhite} toggleTheme={toggleTheme}></Navbar>
-					<Slider></Slider>
-					<h2 className="text-align-center" style={{ fontSize: isIncreased ? '45px' : '39px', fontFamily: fontFamilietwo[fontFamilyIndex] }}>
+					<Slider toggleFontSize={toggleFontSize}
+							isIncreased={isIncreased}
+							toggleFontFamily={toggleFontFamily}
+							fontFamilyIndex={fontFamilyIndex}
+							toggleMenu={toggleMenu}></Slider>
+					<h2 className="text-align-center" style={{ fontSize: isIncreased ? '40px' : '35px', fontFamily: fontFamilietwo[fontFamilyIndex] }}>
 						{t("greeting")}
 					</h2>
 					<Row className="main-container-padding">
@@ -72,7 +76,7 @@ function Home() {
 						</Col>
 
 					</Row>
-					<h2 className="text-align-center" style={{ fontSize: isIncreased ? '45px' : '39px', fontFamily: fontFamilietwo[fontFamilyIndex] }}>{t("Categories")}</h2>
+					<h2 className="text-align-center" style={{ fontSize: isIncreased ? '40px' : '35px', fontFamily: fontFamilietwo[fontFamilyIndex] }}>{t("Categories")}</h2>
 					<Categories></Categories>
 					<UserFooter />
 			</div>

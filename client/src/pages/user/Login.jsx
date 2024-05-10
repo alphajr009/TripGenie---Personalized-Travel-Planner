@@ -132,12 +132,15 @@ const Login = () => {
           <Row className="main-col">
             <Col className="form-section" span={12}>
               <Col className="innter-form-section" span={12}>
+              <div className={`nav ${isBlackAndWhite ? 'black-and-white' : ''}`}>
+
                 <h1 className="text-align-left" style={{ fontSize: isIncreased ? '35px' : '25px', fontFamily: fontFamilietwo[fontFamilyIndex]}}>{t("Login")}</h1>
                 <p className="text-align-left" style={{ fontSize: isIncreased ? '16px' : '12px', fontFamily: fontFamilietwo[fontFamilyIndex]}}>
                   {t("LoginHeader")}
                   <br />
                   {t("LoginHeader2")}
                 </p>
+              </div>
 
                 <Form
                   style={{
@@ -202,7 +205,7 @@ const Login = () => {
                       className="login-btn"
                       type="primary"
                       htmlType="submit"
-                      style={{ fontSize: isIncreased ? '30px' : '20px', fontFamily: fontFamilietwo[fontFamilyIndex]}}
+                      style={{ fontSize: isIncreased ? '17px' : '14px', fontFamily: fontFamilietwo[fontFamilyIndex]}}
                     >
                       {t("Login")}
                     </Button>
@@ -227,6 +230,8 @@ const Login = () => {
                   <a href="/forget-password" className={`nav ${isBlackAndWhite ? 'black-and-white' : ''}`} style={{ fontSize: isIncreased ? '17px' : '14px', fontFamily: fontFamilietwo[fontFamilyIndex]}}>{t("ForgotPW")}</a>{" "}
                 </div>
                 <div className="login-acc-have">
+                  <div className={`nav ${isBlackAndWhite ? 'black-and-white' : ''}`}>
+
                   <p className="text-align-center" style={{ fontSize: isIncreased ? '17px' : '14px', fontFamily: fontFamilietwo[fontFamilyIndex]}}>
                     {t("SignupDescription")}{" "}
                     <a className={`fw-medium ${highlightLinks ? 'highlighted-link' : ''}`} href="/signup" style={{ fontSize: isIncreased ? '17px' : '14px', fontFamily: fontFamilietwo[fontFamilyIndex]}}>
@@ -234,6 +239,7 @@ const Login = () => {
                     </a>{" "}
                   </p>
                   </div>
+                </div>
               </Col>
             </Col>
             <Col

@@ -77,7 +77,9 @@ function Account() {
         preferences: [preferences],
       });
       console.log(res.data);
+      currentUser.isSetup = true;
 
+      localStorage.setItem("currentUser", JSON.stringify(currentUser));
       location.reload();
     } catch (error) {
       console.log(error);

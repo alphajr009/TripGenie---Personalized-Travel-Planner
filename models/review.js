@@ -12,7 +12,7 @@ const reviewSchema = mongoose.Schema(
     },
     sellerId: {
       type: String,
-      required: true,
+      required: false,
     },
     value: {
       type: Number,

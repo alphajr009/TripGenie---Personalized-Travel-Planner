@@ -98,12 +98,20 @@ router.patch("/updateuser", async (req, res) => {
     user.birthday = new Date(birthday);
     user.address = address;
     user.favhotles = preferences;
+    user.isSetup = true;
     if (Array.isArray(preferences) && preferences.length > 0) {
       user.favhotles = preferences;
     }
 
     await user.save();
-    return res.json({ message: "User details updated successfully" });
+    const temp = {
+      name: user.name,
+      email: user.email,
+      isAdmin: user.isAdmin,
+      _id: user._id,
+      isSetup: user.isSetup,
+    };
+    res.send(temp);
   } catch (error) {
     return res.status(400).json({ error });
   }

@@ -36,6 +36,7 @@ router.post("/login", async (req, res) => {
           email: user.email,
           isAdmin: user.isAdmin,
           _id: user._id,
+          isSetup: user.isSetup,
         };
         res.send(temp);
       } else {
